@@ -6,7 +6,7 @@
 	<title>OPAC</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="favicon.ico" type="image/x-icon" rel=icon>
-    <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/base.css">
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -20,54 +20,53 @@
 				</button>
 				<a class="navbar-brand" href="#">
 					<img src="2.gif" alt="图书馆"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="libheader">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								我的首页
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">信息修改</a>
+								</li>
+								<li>
+									<a href="#">图书续借</a>
+								</li>
+								<li>
+									<a href="#">借阅史</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">财经信息</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">图书查询</a>
+						</li>
+						<li>
+							<a href="#">图书荐购</a>
+						</li>
+						<li>
+							<a href="#">新书通报</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a  data-toggle="modal" data-target="#login-modal">登录</a>
+						</li>
+						<li>
+							<a href="#" data-toggle="modal" data-target="#about-modal">关于</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="collapse navbar-collapse" id="libheader">
-				<ul class="nav navbar-nav">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							我的首页
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li>
-								<a href="#">信息修改</a>
-							</li>
-							<li>
-								<a href="#">图书续借</a>
-							</li>
-							<li>
-								<a href="#">借阅史</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="#">财经信息</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">图书查询</a>
-					</li>
-					<li>
-						<a href="#">图书荐购</a>
-					</li>
-					<li>
-						<a href="#">新书通报</a>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a  data-toggle="modal" data-target="#modalLogin">登录</a>
-						
-					</li>
-					<li>
-						<a href="#" data-toggle="modal" data-target="#about-modal">关于</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<footer id ="libfooter" class="navbar navbar-default  navbar-static-bottom ">
-		<div class="container-fluid">
+		</nav>
+		<footer id ="libfooter" class="navbar navbar-default  navbar-static-bottom ">
+			<div class="container-fluid">
 				<ul  class="nav navbar-nav ">
 					<li>
 						<a href="#">&copy;2014 wsyslin</a>
@@ -82,33 +81,55 @@
 						</li>
 					</li>
 				</ul>
-		</div>
-	</footer>
-	<div class="modal fade"  aria-labelledby="myLargeModalLabel" aria-hidden="true"  id="modalLogin">
-		<div  class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<h4 class="modal-title">请输入账号名和密码</h4>
-				</div>
-				<div class="modal-body">
-                  <label for="login_field">
-                        用户名：
-                  </label>
-                 <input autocapitalize="off" autocorrect="off" autofocus="autofocus" class="input-block" id="login_field" name="login" tabindex="1" type="text">
-                <label for="password">
-                     密码： <a href="/password_reset">(忘记密码)</a>
-                </label>
-                <input class="input-block" id="password" name="password" tabindex="2" type="password">
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">登录</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>	
+			</div>
+		</footer>
+		<div class="modal fade"  id="login-modal">
+			<div  class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="text-center text-primary">请输入用户名和密码</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form col-md-12 center-block">
+							<div class="form-group">                 
+								<label for="login_field">
+									用户名：
+								</label>
+								<input autocapitalize="off" autocorrect="off" autofocus="autofocus" class="form-control input-lg" id="login_field" name="login" tabindex="1" type="text">
+							</div>
+							<div class="form-group">  
+								<label for="password">
+									密码： <a href="/password_reset">(忘记密码)</a>
+								</label>
+								<input class="form-control input-lg" id="password" name="password" tabindex="2" type="password">
+							</div>
+							<div  class="form-group">				
+								<button type="button" class="btn btn-primary  btn-lg btn-block">登录</button>
+							</div>	
+						</form>
+					</div>
+					<div class="modal-footer">
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<script src="js/jquery-2.1.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-</body>
+		<div class="modal fade"  id="about-modal">
+			<div  class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="text-center text-primary">关于本系统</h4>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
 </html>
